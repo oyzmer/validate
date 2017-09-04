@@ -117,10 +117,9 @@ class Base extends VaAction
         //验证返回信息处理
         if (count($errors) > 0) {
             $res = ['valid' => 0, 'message' => implode('<br/>', $errors)];
-            die(json_encode($res, JSON_UNESCAPED_UNICODE));
+            return $res;
         }
-
-        return true;
+        return [];
     }
 
     /**

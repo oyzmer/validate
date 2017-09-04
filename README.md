@@ -71,15 +71,18 @@ array(字段名,验证方法,错误信息,验证条件)
 验证响应由配置文件 system/config/error.php 中的app 配置段决定。
 
 ####redirect
+
 直接跳转,会分配变量$errors到前台，开发者可以通过模板标签读取错误内容。
 
 ####show
+
 直接显示错误信息，不需要开发者处理
 
 ####default
 由开发者自行处理，需要使用  \sing\validate\Validate::fail()自行进行判断。
 
 ##扩展使用
+
 ####增加规则
 ```
 \sing\validate\Validate::extend('checkUser',function($field,$value,$params){
@@ -90,6 +93,7 @@ array(字段名,验证方法,错误信息,验证条件)
 第一个参数为验证规则名称，第二参数闭包函数。
 
 ####验证判断
+
 需要响应方式为default值时有效。
 ```
 if(\sing\validate\Validate::fail()){
@@ -98,6 +102,7 @@ if(\sing\validate\Validate::fail()){
 ```
 
 ####链式操作
+
 ```
 \sing\validate\Validate::make(array(
         array('username','required|email','邮箱不能为空')
@@ -105,6 +110,7 @@ if(\sing\validate\Validate::fail()){
 ```
 
 ####获取错误信息
+
 错误信息会记录到模型对象的 error 属性中，使用 getError() 方法获取但需要设置处理方式为 default
 ```
 \sing\validate\Validate::getError();
