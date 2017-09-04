@@ -8,10 +8,10 @@
  * | Copyright (c) 2012-2019, www.houdunwang.com. All Rights Reserved.
  * '-------------------------------------------------------------------*/
 
-namespace houdunwang\validate\build;
+namespace sing\validate\build;
 
-use houdunwang\code\Code;
-use houdunwang\db\Db;
+//use houdunwang\code\Code;
+//use houdunwang\db\Db;
 
 class VaAction
 {
@@ -38,7 +38,7 @@ class VaAction
     //验证码验证
     public function captcha($field, $value, $params, $data)
     {
-        return isset($data[$field]) && strtoupper($data[$field]) == Code::get();
+        return true;//isset($data[$field]) && strtoupper($data[$field]) == Code::get();
     }
 
     //存在字段时验证失败
@@ -48,16 +48,16 @@ class VaAction
     }
 
     //自动验证字段值唯一
-    public function unique($field, $value, $params, $data)
-    {
-        $args = explode(',', $params);
-        $db   = Db::table($args[0])->where($field, $value);
-        if (isset($data[$args[1]])) {
-            $db->where($args[1], '<>', $data[$args[1]]);
-        }
-
-        return empty($value) || ! $db->pluck($field) ? true : false;
-    }
+//    public function unique($field, $value, $params, $data)
+//    {
+//        $args = explode(',', $params);
+//        $db   = Db::table($args[0])->where($field, $value);
+//        if (isset($data[$args[1]])) {
+//            $db->where($args[1], '<>', $data[$args[1]]);
+//        }
+//
+//        return empty($value) || ! $db->pluck($field) ? true : false;
+//    }
 
     //邮箱验证
     public function email($name, $value, $params)

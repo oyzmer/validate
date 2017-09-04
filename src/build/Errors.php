@@ -8,7 +8,7 @@
  * | Copyright (c) 2012-2019, www.houdunwang.com. All Rights Reserved.
  * '-------------------------------------------------------------------*/
 
-namespace houdunwang\validate\build;
+namespace sing\validate\build;
 
 /**
  * 记录验证错误信息
