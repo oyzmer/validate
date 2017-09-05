@@ -38,7 +38,6 @@ class Base extends VaAction
     public function make($validates, array $data = [])
     {
         $this->error = [];
-        $data = $data ? $data : Request::post();
         foreach ($validates as $validate) {
             //字段名
             $fieldName = $validate[0];
