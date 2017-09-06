@@ -28,7 +28,7 @@ class VaAction
     //验证字段是否存在
     public function required($field, $value, $params, $data)
     {
-        if ( ! isset($data[$field]) || empty($data[$field])) {
+        if ( ! isset($data[$field]) || empty($data[$field])) { //TODO 必填值为 0 也会抛出异常
             return false;
         }
 
