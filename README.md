@@ -6,7 +6,7 @@ Validate组件提供了方便的验证机制，快速实现验证业务。
 ## 安装
 使用 composer 命令进行安装或下载源代码使用。
 ```
-composer require sing/validate
+composer require oyzmer/validate
 ```
 
 ## 使用
