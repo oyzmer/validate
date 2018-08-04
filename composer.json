@@ -1,5 +1,5 @@
 {
-  "name": "sing/validate",
+  "name": "oyzmer/validate",
   "description": "Validate组件提供了方便的验证机制，快速实现验证业务。",
   "keywords": [
     "Sing"
@@ -7,8 +7,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Sing",
-      "email": "78276478@qq.com"
+      "name": "oyzm",
+      "email": "o.yyyy@qq.com"
     }
   ],
   "minimum-stability": "stable",
